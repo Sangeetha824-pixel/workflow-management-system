@@ -2,8 +2,10 @@
 
 ## Demo Video
 
-[![Watch demo video of FlowMate workflow automation system showing login and dashboard features]
-(https://img.youtube.com/vi/l8TCH61kEns/0.jpg)](https://youtu.be/l8TCH61kEns)
+Watch demo video of FlowMate workflow automation system showing login and dashboard features
+Link
+(https://img.youtube.com/vi/l8TCH61kEns/0.jpg)]
+(https://youtu.be/l8TCH61kEns)
 
 -------------------------------------------------------------------------------------------------------------------
 
