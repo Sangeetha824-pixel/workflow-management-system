@@ -9,26 +9,20 @@
 
 ## Screenshots
 
-### Login
+## Login Page
+!![Login](assets/1.loginpage/1.jpeg)
 
-![Login](assets/login)
+## Dashboard 
+![Dashboard](assets/2.dashboard/5.jpeg)
 
-### Dashboard
+## Request Page
+![Request](assets/4.request/8.jpeg)
 
-![Dashboard](assets/dashboard)
+## Workflow
+![Workflow](assets/3.workflow/6.jpeg)
 
-### Request
-
-![Request](assets/request)
-
-### Workflow Creation
-
-![Workflow](assets/workflow)
-
-### Approvals
-
-![Approvals](assets/approvals)
-
+## Approval Page
+![Approvals](assets/5.approvals/12.jpeg)
 --------------------------------------------------------------------------------------------------------------------
 
 ## Tech Stack
