@@ -1,16 +1,84 @@
-# React + Vite
+# FlowMate - Workflow Automation System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo Video
 
-Currently, two official plugins are available:
+[![Watch demo video of FlowMate workflow automation system showing login and dashboard features]
+(https://img.youtube.com/vi/l8TCH61kEns/0.jpg)](https://youtu.be/l8TCH61kEns)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-------------------------------------------------------------------------------------------------------------------
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Login
 
-## Expanding the ESLint configuration
+![Login](assets/login)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Dashboard
+
+![Dashboard](assets/dashboard)
+
+### Request
+
+![Request](assets/request)
+
+### Workflow Creation
+
+![Workflow](assets/workflow)
+
+### Approvals
+
+![Approvals](assets/approvals)
+
+--------------------------------------------------------------------------------------------------------------------
+
+## Tech Stack
+
+* **Frontend:** React + Vite
+* **Backend:** FastAPI
+* **Database:** MySQL
+
+--------------------------------------------------------------------------------------------------------------------
+
+## Run Project
+
+### Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+Application runs on: http://127.0.0.1:8000
+API documentation: http://127.0.0.1:8000/docs
+
+--------------------------------------------------------------------------------------------------------------------
+
+### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Application runs on: http://localhost:5174
+
+--------------------------------------------------------------------------------------------------------------------
+
+## Features
+
+* Role-based authentication (Admin, HR, Manager, Employee)
+* Leave, expense, and fund request management
+* Workflow automation system
+* Approval flow for managers
+* Dashboard with key metrics
+
+--------------------------------------------------------------------------------------------------------------------
+
+## Notes
+
+* Ensure PostgreSQL is running before starting the backend
+* Update the `.env` file with correct database credentials
