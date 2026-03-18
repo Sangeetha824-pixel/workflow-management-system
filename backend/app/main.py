@@ -1,0 +1,47 @@
+# app/main.py
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.database import create_tables
+from app.routes.auth      import router as auth_router
+from app.routes.workflow  import router as workflow_router
+from app.routes.step      import router as step_router
+from app.routes.rule      import router as rule_router
+from app.routes.execution import router as execution_router
+from app.routes.user      import router as user_router
+from app.routes.stats     import router as stats_router
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    create_tables()
+    yield
+
+
+app = FastAPI(
+    title="Workflow Automation API",
+    description="AI-powered workflow automation system",
+    version="1.0.0",
+    lifespan=lifespan,
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(auth_router)
+app.include_router(workflow_router)
+app.include_router(step_router)
+app.include_router(rule_router)
+app.include_router(execution_router)
+app.include_router(user_router)
+app.include_router(stats_router)
+
+
+@app.get("/")
+def root():
+    return {"message": "Workflow Automation API is running"}
