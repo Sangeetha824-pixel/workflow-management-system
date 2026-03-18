@@ -23,7 +23,7 @@ class UserResponse(BaseModel):
     email: str
     role: str
     department: Optional[str] = None
-    leave_balance: Optional[int] = 20
+    leave_balance: Optional[int] = None
     created_at: Optional[datetime] = None
 
     class Config:
@@ -36,7 +36,7 @@ class UserUpdate(BaseModel):
     leave_balance: Optional[int] = None
 
 
-class TokenResponse(BaseModel):
+class LoginResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
     user: UserResponse

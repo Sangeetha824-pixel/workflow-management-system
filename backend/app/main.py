@@ -20,26 +20,25 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Workflow Automation API",
-    description="AI-powered workflow automation system",
     version="1.0.0",
     lifespan=lifespan,
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-app.include_router(auth_router)
-app.include_router(workflow_router)
-app.include_router(step_router)
-app.include_router(rule_router)
-app.include_router(execution_router)
-app.include_router(user_router)
-app.include_router(stats_router)
+app.include_router(auth_router,      prefix="/auth",       tags=["Auth"])
+app.include_router(workflow_router,  prefix="/workflows",  tags=["Workflows"])
+app.include_router(step_router,      prefix="/steps",      tags=["Steps"])
+app.include_router(rule_router,      prefix="/rules",      tags=["Rules"])
+app.include_router(execution_router, prefix="/executions", tags=["Executions"])
+app.include_router(user_router,      prefix="/users",      tags=["Users"])
+app.include_router(stats_router,     prefix="/stats",      tags=["Stats"])
 
 
 @app.get("/")
