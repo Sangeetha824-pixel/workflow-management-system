@@ -76,5 +76,5 @@ Application runs on: http://localhost:5174
 
 ## Notes
 
-* Ensure PostgreSQL is running before starting the backend
+* Ensure MySQL is running before starting the backend
 * Update the `.env` file with correct database credentials
